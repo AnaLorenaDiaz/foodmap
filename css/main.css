@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #000000;
+}
+body {
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+}
+
+/*clases generales*/
+.container-flex-row {
+	display: flex;
+	justify-content: space-between;
+}
+.container-flex-column {
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  padding: 2em;
+}
+.vh100 {
+    height: 100vh;
+}
+.grad50 {
+	background: linear-gradient(#000000 50%, #2B2B2B);
+}
+.center {
+    text-align: center;
+}
+
+/*INDEX*/
+
+.logo {
+    color: #ea8519;;
+    font-size: 50px;
+    font-weight: 600;
+}
+/*icono de carga*/
+.loader {
+    margin: 0 0 2em;
+    height: 100px;
+    width: 20%;
+    text-align: center;
+    padding: 1em;
+    margin: 0 auto 1em;
+    display: inline-block;
+    vertical-align: top;
+}
+/*Color del icono de carga*/
+svg path, svg rect {
+    fill: #FF6700;
+}
+
+/*FOODMAP*/
+
+#map {
+    width: 100%;
+    height: 35vh;
+    color: #000000;
+}
+.subtitle {
+    color: #ea8519;
+    margin-top: 8%;
+    margin-bottom: 5%;
+}
+.box {
+    border: 2px solid white;
+    border-radius: 7px;
+    height: 30vh;
+    width: 45%;
+    margin-top: 8%;
+    display: inline-block;
+}
+img {
+    width: 100%;
+    height: 100%;
+}
+img:hover, .box:hover {
+    border-radius:50%;
+    -webkit-border-radius:50%;
+    box-shadow: 0px 0px 15px 15px #ec731e;
+    -webkit-box-shadow: 0px 0px 15px 15px #ec731e;
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+}
+
+/*MODAL*/
+.image {
+    border: 2px solid white;
+    border-radius: 7px;
+    height: 30vh;
+    width: 45%;
+}
+.image:hover {
+    border-radius: none;
+    -webkit-border-radius: none;
+    box-shadow: none;
+    transform: none;
+}

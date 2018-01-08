@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- - - - - - - - - - - - - CABEZA - - - - - - - - - - - - - -->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<link rel="stylesheet" href="../vendors/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/main.css">
+	<title>Foodmap</title>
+</head>
+<!-- - - - - - - - - - - - - CUERPO - - - - - - - - - - - - - -->
+<body class="grad50 vh100">
+
+	<!--titulo-->
+    <header>
+        <p class="logo center">Foodmap</p>
+	</header>
+	<!--mapa // https://developers.google.com/maps/documentation/javascript/geolocation?hl=es-->
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<div id="map"></div>
+			</div>
+		</div>
+	</div>
+	<!--subtitulo-->
+	<h2 class="subtitle center">Comida cerca de ti</h2>
+	<!--buscador-->
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="input-group">
+					<input type="text" class="form-control  textinput clearable" placeholder="Nombre del restaurante">
+					<span class="input-group-btn">
+						<button class="btn btn-default" type="button">
+							<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+						</button>
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--bloques de imagenes-->
+	<div class="clear"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12"    id="parent">
+				<button type="button" class="box restaurant" data-filtro="rockys pollo" data-toggle="modal" data-target="#rockys">
+					<img src="../assets/images/logo1.png" alt="rockys">
+				</button>
+				<button type="button" class="box col-xs-offset-1 restaurant" data-filtro="tgi fridays" data-toggle="modal" data-target="#fridays">
+					<img src="../assets/images/logo2.png" alt="fridays">
+				</button>
+				<button type="button" class="box restaurant" data-filtro="mantra indu" data-toggle="modal" data-target="#mantra">
+					<img src="../assets/images/logo3.jpg" alt="mantra">
+				</button>
+				<button type="button" class="box col-xs-offset-1 restaurant" data-filtro="veda vegetariana" data-toggle="modal" data-target="#veda">
+					<img src="../assets/images/logo4.jpeg" alt="veda">
+				</button>
+				<button type="button" class="box restaurant" data-filtro="papa johns pizza" data-toggle="modal" data-target="#papa-johns">
+					<img src="../assets/images/logo5.png" alt="papa-johns">
+				</button>
+				<button type="button" class="box col-xs-offset-1 restaurant" data-filtro="don belisario pollo" data-toggle="modal" data-target="#belisario">
+					<img src="../assets/images/logo6.jpg" alt="belisario">
+				</button>
+				<button type="button" class="box restaurant" data-filtro="kfc pollo" data-toggle="modal" data-target="#kfc">
+					<img src="../assets/images/logo7.png" alt="kfc">
+				</button>
+				<button type="button" class="box col-xs-offset-1 restaurant" data-filtro="mc donalds hamburguesa" data-toggle="modal" data-target="#mc-donalds">
+					<img src="../assets/images/logo8.png" alt="mc-donalds">
+				</button>
+				<button type="button" class="box restaurant" data-filtro="bembos hamburguesa" data-toggle="modal" data-target="#bembos">
+					<img src="../assets/images/logo9.png" alt="bembos">
+				</button>
+				<button type="button" class="box col-xs-offset-1 restaurant" data-filtro="chilis" data-toggle="modal" data-target="#chilis">
+					<img src="../assets/images/logo10.png" alt="chilis">
+				</button>
+			</div>
+		</div>
+	</div>
+
+
+	<!--modales-->
+	<div class="modal fade" id="rockys" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title center" id="myModalLabel">ROCKYS</h4>
+				</div>
+				<div class="modal-body center">
+					<img class="image" src="../assets/images/mod1.png" alt="pollo-rockys">
+					<h3>Restaurante especializado en pollo</h3>
+					<p>Direccion: Av. Alfredo Benavides 5039</p>
+					<p>Telefono: (01) 6135000</p>
+					<p>Horario: 12pm - 11pm</p>
+					<p>Opiniones: 5.6/10</p>
+				</div>
+				<div class="modal-footer center">
+					<button type="button" class="btn btn-warning">Pedir Ahora</button>
+				</div>
+		 	</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="fridays" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title center" id="myModalLabel">TGI FRIDAYS</h4>
+				</div>
+				<div class="modal-body center">
+					<img class="image" src="../assets/images/mod2.png" alt="food-fridays">
+					<h3>Restaurante de ambiente festivo con un amplio surtido de cervezas, cócteles y comida americana</h3>
+					<p>Direccion: Av. Javier Prado Este 4200</p>
+					<p>Telefono: (01) 6106969</p>
+					<p>Horario: 9am - 6pm</p>
+					<p>Opiniones: 6.3/10</p>
+				</div>
+				<div class="modal-footer center">
+					<button type="button" class="btn btn-warning">Pedir Ahora</button>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="mantra" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title center" id="myModalLabel">MANTRA</h4>
+				</div>
+				<div class="modal-body center">
+					<img class="image" src="../assets/images/mod3.png" alt="comida-hindu">
+					<h3>Restaurante especializado en comida hindu</h3>
+					<p>Direccion: Av. Alfredo Benavides 1761</p>
+					<p>Telefono: (01) 4450127</p>
+					<p>Horario: 12:30pm - 11pm</p>
+					<p>Opiniones: 8.2/10</p>
+				</div>
+				<div class="modal-footer center">
+					<button type="button" class="btn btn-warning">Pedir Ahora</button>
+				</div>
+		 	</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="veda" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title center" id="myModalLabel">VEDA</h4>
+				</div>
+				<div class="modal-body center">
+					<img class="image" src="../assets/images/mod4.png" alt="comida-vegetariana">
+					<h3>Restaurante especializado en platos vegetarianos</h3>
+					<p>Direccion: Calle Schell 630</p>
+					<p>Telefono: (01) 7194174</p>
+					<p>Horario: 12pm - 10pm</p>
+					<p>Opiniones: 9.8/10</p>
+				</div>
+				<div class="modal-footer center">
+					<button type="button" class="btn btn-warning">Pedir Ahora</button>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="papa-johns" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title center" id="myModalLabel">PAPA JOHNS</h4>
+				</div>
+				<div class="modal-body center">
+					<img class="image" src="../assets/images/mod5.png" alt="pizza-papa-johns">
+					<h3>Restaurante especializado en pizzas</h3>
+					<p>Direccion: Av. Alfredo Benavides 2019</p>
+					<p>Telefono: (01) 6060000</p>
+					<p>Horario: 11am - 12am</p>
+					<p>Opiniones: 8.4/10</p>
+				</div>
+				<div class="modal-footer center">
+					<button type="button" class="btn btn-warning">Pedir Ahora</button>
+				</div>
+		 	</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="belisario" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title center" id="myModalLabel">DON BELISARIO</h4>
+				</div>
+				<div class="modal-body center">
+					<img class="image" src="../assets/images/mod6.png" alt="pollo-belisario">
+					<h3>Restaurante especializado en pollo</h3>
+					<p>Direccion:esquina Av. Alfredo Benavides con Alcanfores</p>
+					<p>Telefono: (01) 2423069</p>
+					<p>Horario: 12pm - 11pm</p>
+					<p>Opiniones: 5.7/10</p>
+				</div>
+				<div class="modal-footer center">
+					<button type="button" class="btn btn-warning">Pedir Ahora</button>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="kfc" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title center" id="myModalLabel">KFC</h4>
+				</div>
+				<div class="modal-body center">
+					<img class="image" src="../assets/images/mod7.png" alt="pollo-kfc">
+					<h3>Restaurante de comida rapida especializado en pollo</h3>
+					<p>Direccion: Av. Alfredo Benavides 5240</p>
+					<p>Telefono: (01) 5050505</p>
+					<p>Horario: 11am - 12am</p>
+					<p>Opiniones: 3.9/5</p>
+				</div>
+				<div class="modal-footer center">
+					<button type="button" class="btn btn-warning">Pedir Ahora</button>
+				</div>
+		 	</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="mc-donalds" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title center" id="myModalLabel">MC DONALDS</h4>
+				</div>
+				<div class="modal-body center">
+					<img class="image" src="../assets/images/mod8.png" alt="mc-donalds">
+					<h3>Restaurante especializado en hamburguesas</h3>
+					<p>Direccion: Av. Alfredo Benavides 1791</p>
+					<p>Telefono: (01) 7000505</p>
+					<p>Horario: 8am - 1am</p>
+					<p>Opiniones: 4.0/5</p>
+				</div>
+				<div class="modal-footer center">
+					<button type="button" class="btn btn-warning">Pedir Ahora</button>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="bembos" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title center" id="myModalLabel">BEMBOS</h4>
+				</div>
+				<div class="modal-body center">
+					<img class="image" src="../assets/images/mod9.png" alt="hamburguesas-bembos">
+					<h3>Restaurante de comida rapida especializado en hamburguesas</h3>
+					<p>Direccion: Av. Alfredo Benavides 1821</p>
+					<p>Telefono: (01) 4191919</p>
+					<p>Horario: 11am - 12am</p>
+					<p>Opiniones: 7.2/10</p>
+				</div>
+				<div class="modal-footer center">
+					<button type="button" class="btn btn-warning">Pedir Ahora</button>
+				</div>
+		 	</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="chilis" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title center" id="myModalLabel">CHILIS</h4>
+				</div>
+				<div class="modal-body center">
+					<img class="image" src="../assets/images/mod10.png" alt="chilis">
+					<h3>Cadena de comida americana ambientado en el suroeste americano</h3>
+					<p>Direccion: Av. Alfredo Benavides 1780</p>
+					<p>Telefono: (01) 5055000</p>
+					<p>Horario: 12pm - 12am</p>
+					<p>Opiniones: 8.1/10</p>
+				</div>
+				<div class="modal-footer center">
+					<button type="button" class="btn btn-warning">Pedir Ahora</button>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<script src="../vendors/js/jquery-3.2.1.min.js"></script>
+	<script src="../vendors/bootstrap/js/bootstrap.min.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKB-VSYFy_G-woi7Cg6B2bQcjL66kM9s4&callback=initMap"></script>
+	<script src="../js/foodmap.js"></script>
+</body>
+</html>
